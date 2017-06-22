@@ -31,7 +31,7 @@ case class LandsatImage(
   sunElevation: Double,
   dayTime: Boolean,
   sensor: String,
-  receivingStation: String,
+  receivingStation: Option[String],
   dateUpdated: ZonedDateTime
 ) extends LazyLogging {
   def baseS3Path = f"L8/$path%03d/$row%03d/$sceneId"
